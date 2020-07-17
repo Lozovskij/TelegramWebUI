@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navDesktop">
+            <section class = "navLeft">
+                <div class = "burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <img class = "logo" src="images/logo.svg" alt="logo">
+            </section>
+            <section class ="navRight">
+                <div class="userInfo">
+                    <h4 class ="peerName">Artem Atemych</h4>
+                    <div class ="peerStatus">last seen recently</div>
+                </div>
+                <div class="placeHolder"></div>
+                <div class="searchBtn">
+                    <div class="searchImg"></div>
+                </div>
+                <div class="threeDots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
+        </nav>
+        <nav class="navMobile">
+            <section class ="navRight">
+                <div class="backToDialogs"></div>
+                <div class="userInfo">
+                    <h4 class ="peerName">Artem Atemych</h4>
+                    <div class ="peerStatus">last seen recently</div>
+                </div>
+                <div class="placeHolder"></div>
+                <div class="threeDots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="img_Artem avatar"></div>
+            </section>
+            <!--navLeft for mobile?-->
+        </nav>
+    </header>
+    <section class="dialogsArea">
+        <div class="searchBox">
+            <input class = "searchInput inputStyle" type = "search" name = "" placeholder="Search">
+        </div>
+        <div class="scrollable">
+
+            <div class="dialogItem">
+                <div class="peerImg img_Artem"></div>
+                <div class="nameAndMsg textOverflow">
+                    <span class="peerName textOverflow">Artem Artemovich</span>
+                    <span class="lastMsg textOverflow">Curabitur dapibus, est sit amet auctor pharetra, justo arcu volutpat ipsum, vel volutpat lacus enim et velit</span>
+                </div>
+                <div class="meta">
+                    <span class="date">5/23/20</span>
+                    <span class="msgAmount" >3</span>
+                </div>
+            </div>
+            <div class="dialogItem">
+                <div class="peerImg img_Dimon"></div>
+                <div class="nameAndMsg textOverflow">
+                    <span class="peerName textOverflow">Dimon</span>
+                    <span class="lastMsg textOverflow">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                </div>
+                <div class="meta">
+                    <span class="date">5/23/20</span>
+                    <!--<span class="msgAmount">3</span>-->
+                </div>
+            </div>
+            <div class="dialogItem">
+                <div class="peerImg img_Ivan"></div>
+                <div class="nameAndMsg textOverflow">
+                    <span class="peerName textOverflow">Ivan Ivanovich</span>
+                    <span class="lastMsg textOverflow">Nulla vestibulum nulla ut malesuada gravida</span>
+                </div>
+                <div class="meta">
+                    <span class="date">5/23/20</span>
+                    <!--<span class="msgAmount">3</span>-->
+                </div>
+            </div>
+            <div class="dialogItem">
+                <div class="peerImg img_Ilya"></div>
+                <div class="nameAndMsg textOverflow">
+                    <span class="peerName textOverflow">Ilya</span>
+                    <span class="lastMsg textOverflow">Nullam at malesuada ipsum</span>
+                </div>
+                <div class="meta">
+                    <span class="date">5/23/20</span>
+                    <!--<span class="msgAmount">3</span>-->
+                </div>
+            </div>
+            <div class="dialogItem">
+                <div class="peerImg img_Vovan"></div>
+                <div class="nameAndMsg textOverflow">
+                    <span class="peerName textOverflow">Vovan</span>
+                    <span class="lastMsg textOverflow">Pellentesque in neque eleifend, consequat mi ut, finibus mauris</span>
+                </div>
+                <div class="meta">
+                    <span class="date">5/23/20</span>
+                    <!--<span class="msgAmount">3</span>-->
+                </div>
+            </div>
+        </div>
+        <!--<ul class="dialogsStack">
+
+        </ul>-->
+    </section>
+    <section class="messagesAreaDesktop">
+        <div class="scrollable">
+            <div class="messagesStack">
+                <div class="messageBox">
+                    <div class="msgImage img_Artem"></div>
+                    <div class="msgSenderName">Artem</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Artem"></div>
+                    <div class="msgSenderName">Artem</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Nulla vestibulum nulla ut malesuada gravida
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Artem"></div>
+                    <div class="msgSenderName">Artem</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Nullam at malesuada ipsum
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Me"></div>
+                    <div class="msgSenderName">Ivan</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Pellentesque in neque eleifend, consequat mi ut, finibus mauris
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Artem"></div>
+                    <div class="msgSenderName">Artem</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Donec vel finibus eros 
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Artem"></div>
+                    <div class="msgSenderName">Artem</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Mauris pellentesque fermentum velit, et luctus dolor iaculis a
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Me"></div>
+                    <div class="msgSenderName">Ivan</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Nulla iaculis placerat turpis nec mollis. 
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Me"></div>
+                    <div class="msgSenderName">Ivan</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Fusce suscipit ultricies justo, eget aliquam orci rutrum id. 
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Me"></div>
+                    <div class="msgSenderName">Ivan</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Aliquam eu ex sed eros ullamcorper egestas
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Artem"></div>
+                    <div class="msgSenderName">Artem</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Nam sit amet scelerisque mi
+                    </div>
+                </div>
+                
+                <div class="messageBox">
+                    <div class="msgImage img_Artem"></div>
+                    <div class="msgSenderName">Artem</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Nullam eu metus ut sem viverra posuere
+                    </div>
+                </div>
+                <div class="messageBox">
+                    <div class="msgImage img_Artem"></div>
+                    <div class="msgSenderName">Artem</div>
+                    <div class="msgMeta">12:16:12 AM</div>
+                    <div class="msgText">Curabitur dapibus, est sit amet auctor pharetra, justo arcu volutpat ipsum, vel volutpat lacus enim et velit
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="editor">
+            <div class="MyImage img_Me"></div>
+            <div class="textArea">
+                <textarea class = "textInput" type = "text" name = "" placeholder="Write a message..."></textarea>
+                <div class = "smileBox"><div class="smileImg"></div></div>
+            </div>
+            <div class="NotMe img_Artem"></div>
+            <div class="SendAttach">
+                <div class="littleBox">
+                    <div class="sheetBox imgSrc"></div>
+                </div>
+                <div class="littleBox">
+                    <div class="cameraBox imgSrc"></div>
+                </div>
+                <div class="littleBox">
+                    <div class="micBox imgSrc"></div>
+                </div>
+                <div class="placeHolder"></div>
+                <div class="sendBtn">SEND</div>
+            </div>
+        </div>
+
+    </section>
+    <section class="messagesAreaMobile">
+        <div class="scrollable">
+            <div class="messagesStack">
+                <div class="message messageRecieved" >
+                    <div class="msgCloud">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="placeHolder"></div>
+                </div>
+                <div class="message messageRecieved" >
+                    <div class="msgCloud">Nulla vestibulum nulla ut malesuada gravida</div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="placeHolder"></div>
+                </div>
+                <div class="message messageRecieved" >
+                    <div class="msgCloud">Nullam at malesuada ipsum </div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="placeHolder"></div>
+                </div>
+                <div class="message messageSent">
+                    <div class="placeHolder"></div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="msgCloud">Pellentesque in neque eleifend, consequat mi ut, finibus mauris </div>
+                </div>
+                <div class="message messageRecieved">
+                    <div class="msgCloud">Donec vel finibus eros </div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="placeHolder"></div>
+                </div>
+                <div class="message messageRecieved">
+                    <div class="msgCloud"> Mauris pellentesque fermentum velit, et luctus dolor iaculis a </div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="placeHolder"></div>
+                </div>
+                <div class="message messageSent">
+                    <div class="placeHolder"></div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="msgCloud">Nulla iaculis placerat turpis nec mollis. </div>
+                </div>
+                <div class="message messageSent">
+                    <div class="placeHolder"></div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="msgCloud">Fusce suscipit ultricies justo, eget aliquam orci rutrum id. </div>
+                </div>
+                <div class="message messageSent">
+                    <div class="placeHolder"></div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="msgCloud">Aliquam eu ex sed eros ullamcorper egestas </div>
+                </div>
+                <div class="message messageRecieved">
+                    <div class="msgCloud">Nam sit amet scelerisque mi</div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="placeHolder"></div>
+                </div>
+                <div class="message messageRecieved">
+                    <div class="msgCloud"> Nullam eu metus ut sem viverra posuere </div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="placeHolder"></div>
+                </div>  
+                <div class="message messageRecieved">
+                    <div class="msgCloud">Curabitur dapibus, est sit amet auctor pharetra, justo arcu volutpat ipsum, vel volutpat lacus enim et velit </div>
+                    <div class="msgMeta">12:16 AM</div>
+                    <div class="placeHolder"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="editor">
+            <div class="attachBox"><div class="attach"></div></div>
+            <input class = "editorInput inputStyle" type = "text" name = "" placeholder="Write a message...">
+            <div class="micBox"><div class="mic"></div></div>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>

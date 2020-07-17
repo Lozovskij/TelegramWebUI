@@ -1,0 +1,669 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Tahoma,sans-serif,Arial,Helvetica;
+    font-size: 13px;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    background-color: #e7ebf0;
+    grid-template-columns: 1fr 313.1px 696.9px 1fr;
+    grid-template-rows: 48px 1fr 23px;
+    grid-template-areas:
+    ".          navLeft             navRight            .     "
+
+    ".          dialogsArea         messagesAreaDesktop .     "
+
+    "footer     footer              footer              footer";
+}
+
+.burger span {
+    display: block;
+    height: 2px;
+    width: 18px;
+    margin-bottom: 4px;
+    background: #fff;
+}
+
+
+.dialogsArea {
+    grid-area: dialogsArea;
+    background-color: white;
+
+    border-right: 2px solid rgba(207, 207, 207, 0.39);
+    border-bottom: 1px solid #d2dbe3;
+    border-left: 1px solid #dfe5ec;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.dialogsArea .searchBox {
+    height: 58px;
+    padding: 12px;
+    background-color: white;
+}
+
+.dialogsArea .searchInput {
+    height: 34px;
+    padding: 6px 8px 6px 30px;
+
+    /*background-image: url(images/IconsetW.png);
+    background-repeat: no-repeat;
+    background-position: -6px -205px;*/
+    background-image: url(images/IconsetW.png) ;
+    background-repeat: no-repeat;
+    /*-15px -192px*/
+    background-position: -6px -205px;
+    
+
+}
+.dialogsArea input[type="search"]::-webkit-search-cancel-button {
+    text-align: end;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color: #999;
+    width: 13px;
+    height: 13px;
+    margin: 10px 0 10px 11px;
+    background-image:url(images/IconsetW_2x.png);
+    background-repeat: no-repeat;
+    background-size: 42px 1171px;
+    background-position:-15px -192px;
+}
+.dialogsArea .searchInput::placeholder {
+    font-size: 12px;
+}
+
+.dialogItem {
+    padding: 7px 16px;
+    display: flex;
+}
+
+.dialogItem .peerImg {
+    width: 48px;
+    height: 48px;
+    
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.dialogItem .nameAndMsg {
+    flex: 1;
+   
+}
+.dialogItem .peerName{
+    font-weight: 700;
+    margin: 3px 0;
+
+    display:block;/*add ability to set the height, and no need in <br> between <span>s*/
+    height: 18px;
+}
+
+.dialogItem .lastMsg {
+    margin-top: 5px;
+    display:block;
+    height: 18px;
+    color: grey;
+}
+
+.dialogItem .meta {
+    flex: 0 1 auto;
+    text-align: end;
+    
+}
+
+.dialogItem .meta .date {
+    margin-top: 3px;
+    display:block;
+    color: #b3b3b3;
+    font-size:11px;
+}
+.dialogItem .meta .msgAmount {
+    display:inline-block;/*cant use just block, it colors all block in background*/
+    
+    font-size: 11px;
+    color: #fff;
+    font-weight: 700;
+
+    padding: 4px 7px;
+    margin-top: 6px;
+    border-radius: 11.5px;
+
+    background-color: #64c270;
+}
+
+.editorInput {
+    padding-left: 10px;
+    font-size: 15px;
+}
+.editorInput::placeholder {
+    font-size: 15px ;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.logo {
+    margin-left: 39px;
+    width: 62px;
+    height: 14px;
+}
+
+header, nav {
+    display: contents;
+}
+
+.inputStyle {
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 2px;
+    width: 100%;
+}
+.inputStyle::placeholder {
+    font-weight: 400;
+    color: rgb(182, 182, 182);
+}
+.inputStyle:focus{
+    background-color: white;
+    outline: none;
+    border: 1px solid #cccccc;
+}
+
+
+.img_Artem {
+    background-color: lightseagreen;
+    background-image: url(images/9.png);
+    background-size: cover;
+}
+
+.img_Dimon {
+    background-color: green;
+    background-image: url(images/4.png);
+    background-size: cover;
+}
+
+.img_Ivan {
+    background-color: rgb(181, 181, 255);
+    background-image: url(images/10.png);
+    background-size: cover;
+}
+
+.img_Ilya {
+    background-color: darkslategrey;
+    background-image: url(images/3.png);
+    background-size: cover;
+}
+
+.img_Vovan {
+    background-color: darkviolet;
+    background-image: url(images/5.png);
+    background-size: cover;
+}
+
+.img_Me {
+    background-color: rgb(32, 137, 178);
+    background-image: url(images/7.png);
+    background-size: cover;
+}
+
+.messagesAreaDesktop {
+    border-bottom: 1px solid #d2dbe3;
+    border-right: 1px solid #dfe5ec;
+
+    grid-area: messagesAreaDesktop;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.messagesAreaDesktop .scrollable {
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 39px;
+}
+
+.messagesAreaDesktop .messagesStack {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0px auto ;
+    max-width: 560px;
+}
+
+.messagesAreaDesktop .messagesStack .messageBox {
+    padding: 8px 25px;
+    
+    display: grid;
+    grid-template-columns: 42px auto 70px;
+    grid-template-rows: 20px 22px min-content;
+    grid-template-areas:
+    "msgImage   msgSenderName   msgMeta "
+
+    "msgImage   msgText         .       "
+
+    ".          msgText         .       ";
+
+}
+
+
+
+
+.messagesAreaDesktop .messagesStack .messageBox .msgImage {
+    border-radius: 50%;
+    grid-area: msgImage;
+}
+
+.messagesAreaDesktop .messagesStack .messageBox .msgSenderName {
+    grid-area: msgSenderName;
+    
+    padding: 0px 10px;
+    color: #3a6d99;
+    font-weight: 700;
+}
+
+.messagesAreaDesktop .messagesStack .messageBox .msgMeta {
+    grid-area: msgMeta;
+    color: #b3b3b3;
+    font-size:11px;
+    
+}
+
+.messagesAreaDesktop .messagesStack .messageBox .msgText {
+    
+    grid-area: msgText;
+    padding: 0px 10px;
+}
+
+.messagesAreaDesktop .editor {
+    
+
+    margin: 10px auto;
+
+    display: grid;
+    grid-template-columns: 52px 450px 52px;
+    grid-template-rows: 52px min-content;
+    grid-template-areas:
+    "MyImage   textArea     NotMe" 
+
+    ".         SendAttach   .     ";
+}
+@media (max-width: 810px) {
+    .messagesAreaDesktop .editor {
+        margin: 10px;
+        grid-template-columns: 52px auto 52px;
+    }
+}
+
+.messagesAreaDesktop .editor .MyImage{
+    grid-area: MyImage;
+    border-radius: 50%;
+}
+
+.messagesAreaDesktop .editor .NotMe{
+    grid-area: NotMe;
+    border-radius: 50%;
+}
+
+.messagesAreaDesktop .editor .textArea{
+    padding: 1px 0x 1px 19px;
+    grid-area: textArea;
+    /*background-color: gold;*/
+    background-color:white;
+    display: flex;
+}
+.messagesAreaDesktop .editor .textArea .textInput {
+    flex:1;
+    margin-left: 19px;
+    height: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    border-bottom: 1.3px solid rgba(182, 182, 182, 0.329);
+}
+.messagesAreaDesktop .editor .textArea .textInput::placeholder {
+    font-size: 13px;
+    color: #9aa2ab;
+    opacity: 0.7;
+}
+.messagesAreaDesktop .editor .textArea .smileBox {
+    height: 100%;
+    margin-right: 20px;
+    border-bottom: 1.3px solid rgba(182, 182, 182, 0.329);
+}
+.messagesAreaDesktop .editor .textArea .smileImg {
+    width: 22px;
+    height:22px;
+    background-image: url(images/General_2x.png);
+    background-size: 40px 948px;
+    background-repeat: no-repeat;
+    background-position: -9px -335px;
+    
+}
+.messagesAreaDesktop .editor .SendAttach{
+    height: 45px;
+    grid-area: SendAttach;
+}
+.messagesAreaDesktop .editor .SendAttach {
+    display: flex;
+}
+.messagesAreaDesktop .editor .SendAttach .littleBox{
+    width: 50px;
+    height: 50px;
+    padding: 13px 16px;
+    
+}
+
+.messagesAreaDesktop .editor .SendAttach .littleBox .sheetBox{
+    width: 18px;
+    height: 17px;
+    opacity: 0.8;
+    background-image: url(images/General_2x.png);
+    background-size: 40px 948px;
+    background-repeat: no-repeat;
+    background-position: -11px -455px;
+}
+.messagesAreaDesktop .editor .SendAttach .littleBox .sheetBox :hover{
+    opacity: 1;/*not working o_o*/
+}
+.messagesAreaDesktop .editor .SendAttach .littleBox .cameraBox{
+    width: 20px;
+    height: 18px;
+    opacity: 0.8;
+    background-image: url(images/General_2x.png);
+    background-size: 40px 948px;
+    background-repeat: no-repeat;
+    background-position: -10px -399px;
+}
+.messagesAreaDesktop .editor .SendAttach .littleBox .micBox{
+    width: 18px;
+    height: 22px;
+    opacity: 0.8;
+    background-image: url(images/IconsetW_2x.png);
+    background-size: 42px 1171px;
+    background-position: -12px -285px;
+}
+
+
+
+.sendBtn {
+    margin-right: 20px;
+    padding: 12px 0px;
+    font-weight: bold;
+    color: #499dd9;
+}
+.sendBtn:hover {
+    color: #72a0c7;
+}
+
+.messagesAreaMobile {
+    display: none;
+}
+
+.messagesAreaMobile .scrollable {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: white;
+}
+
+.messagesAreaMobile .messagesStack {
+    display: flex;
+    flex-direction: column;
+}
+
+.messagesAreaMobile .messagesStack .message {
+    display: flex;
+    padding: 8px 7px;
+}
+
+.messagesAreaMobile .messagesStack .message .msgCloud {
+    flex-basis: auto;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+.messagesAreaMobile .messagesStack .message .msgMeta {
+    align-self: flex-end;
+    min-width: 60px;
+    color: #b3b3b3;
+    font-size:11px;
+    padding-bottom: 5px;
+}
+
+.messagesAreaMobile .messagesStack .messageRecieved .msgCloud{
+    background: #f1f1f1;
+    margin-right: 7px;
+}
+
+.messagesAreaMobile .messagesStack .messageSent .msgCloud{
+    background: #e4ecf2;
+    margin-left: 7px;
+}
+.messagesAreaMobile .messagesStack .messageSent .msgMeta {
+    text-align: end;
+}
+
+.messagesAreaMobile .editor {
+    height: 54px;
+    /*background-color: lightgrey;*/
+    background-color: white;
+    display: flex;
+    padding: 10px 0px 12px;
+}
+.messagesAreaMobile .editor .attachBox {
+    padding: 5px 13px 10px 13px ;
+}
+
+.messagesAreaMobile .editor .attach{
+    opacity: 0.8;
+    width: 20px;
+    height: 24px;
+    background-image: url(images/IconsetW_2x.png);
+    background-position: -12px -68px;
+    background-size: 42px 1171px;
+}
+
+.messagesAreaMobile .editor .mic {
+    opacity: 0.8;
+    width: 20px;
+    height: 24px;
+    background-image: url(images/IconsetW_2x.png);
+    background-position: -12px -285px;
+    background-size: 42px 1171px;
+}
+.messagesAreaMobile .editor .micBox {
+    padding: 5px 13px 10px 13px ;
+}
+
+nav section {
+    background-color:#497799;
+}
+
+.navLeft {
+    grid-area: navLeft;
+    padding: 17px 20px 15px 22px;
+    display: flex;
+}
+
+.navRight {
+    grid-area: navRight;
+    display: flex;
+    height: 48px;
+}
+.navRight .peerStatus {
+    color:#b9cfe3;
+    align-self: center;
+}
+.navRight .peerName {
+    font-weight: 700;
+    color: #fff;
+    align-self: center;
+}
+
+.navRight .threeDots {
+    width: 55px;
+    
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+.navRight .threeDots span {
+    align-self: center;
+    background-color: #d7e5f0;
+    border-radius: 3px;
+}
+
+
+.navDesktop .navRight .userInfo {
+    display: flex;/*just for row direction*/
+    margin-left: 19px;
+}
+
+.navDesktop .navRight .peerName {
+    margin-right: 8px; /*space between name and status*/
+}
+
+.navDesktop .navRight .searchBtn {
+    width: 48px;
+    display: flex;
+    justify-content: center ;
+
+}
+.navDesktop .navRight .searchBtn .searchImg {
+    align-self: center;
+
+    width: 17px;
+    height: 17px;
+
+    background-image: url(images/IconsetW.png);
+    background-repeat: no-repeat;
+    background-position: -12px -1037px;
+}
+
+.navDesktop .navRight .threeDots span {
+    width: 4px;
+    height: 4px;
+    margin: 1px;
+}
+
+.navMobile {
+    display: none;
+}
+
+.navMobile .navRight .backToDialogs {
+    align-self: center;/*vertivally (height = 46px)*/
+    margin:  0 6px 0 10px;
+
+    width: 11px;
+    height: 19px;
+
+    background-image: url(images/IconsetW.png);
+    background-repeat: no-repeat;
+    background-position: -15px -835px;
+}
+
+.navMobile .navRight .peerName {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.navMobile .navRight .threeDots span {
+    width: 5px;
+    height: 5px;
+    margin: 2px;
+}
+
+.navMobile .navRight .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin: 5px 5px 5px 5px;
+}
+
+.placeHolder {
+    flex: 1;
+}
+
+.scrollable {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    height: 0px; /*min height before whole page sarts scrolling*/
+}
+
+.textOverflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@media (max-height: 600px) {
+    body {
+        grid-template-rows: 48px 1fr;
+        grid-template-areas:
+        ".          navLeft             navRight            .     "
+    
+        ".          dialogsArea         messagesAreaDesktop .     ";
+    }
+}
+
+@media (max-width:1010px)  {
+    body {
+        grid-template-columns: minmax(0, 313.1fr) 696.9fr;
+        grid-template-rows: 48px 1fr;
+        grid-template-areas:
+        "navLeft             navRight"
+
+        "dialogsArea         messagesAreaDesktop";
+    }
+}
+
+@media (max-width: 600px) {
+    
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+
+        "navRight"
+
+        "messagesAreaMobile";
+    }
+
+    .desktop {
+        display: none;
+    }
+    .dialogsArea {
+        display: none;
+    }
+    .messagesAreaMobile {
+        display: flex;
+        flex-direction: column;
+        grid-area: messagesAreaMobile;
+        background-color: lightgreen;
+    }
+    .messagesAreaDesktop {
+        display: none;
+    }
+    .navDesktop {
+        display: none;
+    }
+    .navMobile {
+        display: inline-block;
+    }
+}
+
+
+
+
+/*
+box-shadow: 0px 1px 0 #dfe5ec;
+    border-radius: 0 0 3px 3px;
+    border-left: 1px solid #dfe5ec;
+    border-right: 1px solid #dfe5ec;
+    border-bottom: 1px solid #d2dbe3;
+    */
