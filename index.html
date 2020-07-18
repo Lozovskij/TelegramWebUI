@@ -188,7 +188,20 @@
                     <div class="msgImage img_Artem"></div>
                     <div class="msgSenderName">Artem</div>
                     <div class="msgMeta">12:16:12 AM</div>
-                    <div class="msgText">Nam sit amet scelerisque mi
+                    <div class="msgText">
+                        <div class="msgReply">
+                            <div style="
+                            color: #3a6d99;
+                            font-weight: 700;
+                            margin-bottom: 3px;"> Ivan</div>
+                            <div style="
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;">
+                                Pellentesque in neque eleifend, consequat mi ut, finibus mauris
+                            </div>
+                        </div>
+                        Nam sit amet scelerisque mi
                     </div>
                 </div>
                 
@@ -196,14 +209,48 @@
                     <div class="msgImage img_Artem"></div>
                     <div class="msgSenderName">Artem</div>
                     <div class="msgMeta">12:16:12 AM</div>
-                    <div class="msgText">Nullam eu metus ut sem viverra posuere
+                    <div class="msgText">
+                        <div class="msgVideo">
+
+                            <div class="video">
+                                <div class="iconPlay"></div>
+                                <div class="duration">1:42:32</div>
+                            </div>
+                            <div class="forVideo">
+                                <div class="firstLine"> 
+                                    <div style=
+                                    "font-weight: 700;
+                                    color: #3a6d99;
+                                    align-self: center;">
+                                        Video
+                                    </div>
+                                    <div style=
+                                    "color: #b3b3b3;
+                                    align-self: center;
+                                    margin-left: 5px;">
+                                        944.2 MB
+                                    </div>
+                                </div>
+                                <div class="secondLine">
+                                    <div style=
+                                    "align-self: center;">
+                                        Download
+                                    </div>
+                                    <div style="margin-left: 12px;align-self: center;">
+                                        Play video
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        Nullam eu metus ut sem viverra posuere
                     </div>
                 </div>
                 <div class="messageBox">
                     <div class="msgImage img_Artem"></div>
                     <div class="msgSenderName">Artem</div>
                     <div class="msgMeta">12:16:12 AM</div>
-                    <div class="msgText">Curabitur dapibus, est sit amet auctor pharetra, justo arcu volutpat ipsum, vel volutpat lacus enim et velit
+                    <div class="msgText">
+                        Curabitur dapibus, est sit amet auctor pharetra, justo arcu volutpat ipsum, vel volutpat lacus enim et velit
                     </div>
                 </div>
             </div>
@@ -232,9 +279,9 @@
         </div>
 
     </section>
-    <section class="messagesAreaMobile">
+    <section class="messagesAreaMobile" style="min-width: 0px;">
         <div class="scrollable">
-            <div class="messagesStack">
+            <div class="messagesStack" >
                 <div class="message messageRecieved" >
                     <div class="msgCloud">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                     <div class="msgMeta">12:16 AM</div>
@@ -280,18 +327,34 @@
                     <div class="msgMeta">12:16 AM</div>
                     <div class="msgCloud">Aliquam eu ex sed eros ullamcorper egestas </div>
                 </div>
-                <div class="message messageRecieved">
-                    <div class="msgCloud">Nam sit amet scelerisque mi</div>
+                <div class="message messageRecieved" ><!--display flex-->
+                    <div class="msgCloud textOverflow" style="flex-basis:  auto; /*min-width: 0px;*/">
+                        <div class="msgReply textOverflow">
+                            <div style="color: #3a6d99; margin-bottom: 3px;"> 
+                                Ivan 
+                            </div>
+                            Pellentesque in neque eleifend, consequat mi ut, finibus mauris
+                        </div>
+                        Nam sit amet scelerisque mi
+                    </div>
                     <div class="msgMeta">12:16 AM</div>
                     <div class="placeHolder"></div>
                 </div>
                 <div class="message messageRecieved">
-                    <div class="msgCloud"> Nullam eu metus ut sem viverra posuere </div>
+                    <div class="msgCloud"> 
+                        <div class="msgVideo">
+                            <div class="video">
+                                <div class="iconPlay"></div>
+                                <div class="duration">1:42:32</div>
+                            </div>
+                        </div>
+                        Nullam eu metus ut sem viverra posuere
+                    </div>
                     <div class="msgMeta">12:16 AM</div>
                     <div class="placeHolder"></div>
                 </div>  
                 <div class="message messageRecieved">
-                    <div class="msgCloud">Curabitur dapibus, est sit amet auctor pharetra, justo arcu volutpat ipsum, vel volutpat lacus enim et velit </div>
+                    <div class="msgCloud">Curabitur dapibus, est sit amet auctor pharetra, justo arcu volutpat ipsum, vel volutpat lacus enim et velit</div>
                     <div class="msgMeta">12:16 AM</div>
                     <div class="placeHolder"></div>
                 </div>
